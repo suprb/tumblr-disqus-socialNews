@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>{Title}</title>
-    {block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
-    <link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}">
-    
-    <meta name='text:Disqus Shortname' content='' />
-    
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="http://static.tumblr.com/qdi9m50/V1wmoec8y/jquery.fancybox.css" type="text/css" media="screen" />
+	<meta charset="utf-8">
+	<title>{Title}</title>
+	{block:Description}<meta name="description" content="{MetaDescription}">{/block:Description}
+	<link rel="alternate" type="application/rss+xml" title="RSS" href="{RSS}">
+	
+	<meta name='text:Disqus Shortname' content='' />
+	
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,300,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="http://static.tumblr.com/qdi9m50/V1wmoec8y/jquery.fancybox.css" type="text/css" media="screen" />
 
 
 <style>
@@ -62,16 +62,16 @@ a:active { color: black; }
  */
 
 .l-Inner {
-    max-width: 960px;
-    margin: 0 auto;
-    padding-right: 2em;
-    padding-left: 2em;
+	max-width: 960px;
+	margin: 0 auto;
+	padding-right: 2em;
+	padding-left: 2em;
 }
 
 .Header {
-    padding-top: 2em;
-    position: relative;
-    
+	padding-top: 2em;
+	position: relative;
+	
 }
 
 /**
@@ -80,43 +80,38 @@ a:active { color: black; }
  */
  
 .Nav-main {
-    position: absolute;
-    top: 2em;
-    right: 2em;
+	position: absolute;
+	top: 2em;
+	right: 2em;
 }
 
 .Nav-item {
-    margin-left: 1em;
+	margin-left: 1em;
 }
 
 .Nav-index {
-    
+	
 }
 .Nav-index ul {
-    list-style: none;
-    padding: 0;
+	list-style: none;
+	padding: 0;
 }
 
 .Nav-item--index {
-    margin-bottom: 1em;    
+	margin-bottom: 1em;    
 }
 .Nav-item--index a {
-    display: block;
-    text-align: center;
-    padding: 1em;
+	color: white;
+	display: block;
+	text-align: center;
+	padding: 1em;
 }
 
-.Nav-item--index:nth-child(1) {
-    background-color: red;
+.Nav-item--index:nth-child(odd) {
+	background-color: red;
 }
-.Nav-item--index:nth-child(2) {
-    background-color: green;
-}
-.Nav-item--index:nth-child(3) {
-    background-color: yellow;
-}
-.Nav-item--index:nth-child(4) {
-    background-color: blue;
+.Nav-item--index:nth-child(even) {
+	background-color: green;
 }
 
 /**
@@ -125,7 +120,7 @@ a:active { color: black; }
  */
 
 .Container {
-    margin-top: 2em;
+	margin-top: 2em;
 }
 
 
@@ -137,19 +132,19 @@ a:active { color: black; }
  
 .cf:before,
 .cf:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+	content: " "; /* 1 */
+	display: table; /* 2 */
 }
 
 .cf:after {
-    clear: both;
+	clear: both;
 }
 
-    /* For IE 6/7 only
-     * Include this rule to trigger hasLayout and contain floats.
-     */
+	/* For IE 6/7 only
+	 * Include this rule to trigger hasLayout and contain floats.
+	 */
 .cf {
-    *zoom: 1;
+	*zoom: 1;
 }
 
 
@@ -162,71 +157,73 @@ a:active { color: black; }
 
 </style>
 
-    
+	
 </head>
 
 <body>
-    <header class="Header l-Inner">
-        <a href="/"><h1 class="Title-logo">{Title}</h1></a>
-        
-        {block:Description}
-            <span class="Title-description">{Description}</span>
-        {/block:Description}
-        
-        {block:HasPages}
-            <nav class="Nav-main">
-                {block:Pages}
-                    <span class="Nav-item">
-                        <a href="{URL}" class="">{Label}</a>
-                    </span>
-                {/block:Pages}
-            </nav>
-        {/block:HasPages}
-        
-    </header>
-    
-    <div class="Wrapper--navIndex l-Inner">
-        {block:IndexPage}
-            <nav class="Nav-index">
-                <ul class="">
-                    {block:Pages}
-                        <li class="Nav-item--index">
-                            <a href="{URL}" class="">{Label}</a>
-                        </li>
-                    {/block:Pages}
-                </ul>
-            </nav>
-        {/block:IndexPage}
-    </div>
-    
-    
-    <div class="Container l-Inner">
-        {block:PostTitle}
-            {block:IfDisqusShortname}
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = '{text:Disqus Shortname}'; // Required - Replace <example> with your forum shortname
-
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
-
-{/block:IfDisqusShortname}
-        {/block:PostTitle}
-    
-    
+	<header class="Header l-Inner">
+		<a href="/"><h1 class="Title-logo">{Title}</h1></a>
+		
+		{block:Description}
+			<span class="Title-description">{Description}</span>
+		{/block:Description}
+		
+		{block:HasPages}
+			<nav class="Nav-main">
+				{block:Pages}
+					<span class="Nav-item">
+						<a href="{URL}" class="">{Label}</a>
+					</span>
+				{/block:Pages}
+			</nav>
+		{/block:HasPages}
+		
+	</header>
+	
+	<div class="Wrapper--navIndex l-Inner">
+		{block:IndexPage}
+			<nav class="Nav-index">
+				<ul class="">
+					{block:Pages}
+						<li class="Nav-item--index">
+							<a href="{URL}" class="">{Label}</a>
+						</li>
+					{/block:Pages}
+				</ul>
+			</nav>
+		{/block:IndexPage}
+	</div>
+	
+	
+	<div class="Container l-Inner">
+		{block:PostTitle}
+			{block:IfDisqusShortname}
+				<div id="disqus_thread"></div>
+				<script type="text/javascript">
+					
+					//
+					// Disqus username
+					//
+					
+					var disqus_shortname = '{text:Disqus Shortname}';
+					// you can replace {text:Disqus Shortname}
+					// directly by your username
+					
+					
+					//
+					// Don't edit bellow
+					//
+					(function() {
+						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+					})();
+				</script>
+				
+			{/block:IfDisqusShortname}
+		{/block:PostTitle}
+	</div>
+	
 </body>
 
-<!-- scripts-->
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
-
-    
 </html>
