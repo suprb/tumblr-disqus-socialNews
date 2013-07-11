@@ -3,6 +3,13 @@ tumblr-disqus-socialNews
 
 Disqus and tumblr small hack to turn the combination into a Social News experiment
 
+Todo
+
+* how to have a clean mobile theme
+* responsive as fuck
+* burger navigation menu
+* credits
+
 Specificities
 
 * simple and minimal design
