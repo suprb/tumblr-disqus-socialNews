@@ -46,14 +46,14 @@ Still on the customize page <http://www.tumblr.com/customize/your-blog-name>, fi
 1. Go to [Disqus](https://disqus.com/) and log in your account.
 Go to [Dashboard](https://disqus.com/dashboard) page, and next to **Your Sites**, click on **+ Add**
 
-	* **Site URL**: your name-of-site.tumblr.com
-	* **Site Name**: name-of-site
-	* **Site Shortname**: whatever you feel like, personnaly i use the name of the tumblr. You will need to use this **Shortname** at next step
-	* **Enable Promoted Discovery**: do you want adverts?
+* **Site URL**: your name-of-site.tumblr.com
+* **Site Name**: name-of-site
+* **Site Shortname**: whatever you feel like, personnaly i use the name of the tumblr. You will need to use this **Shortname** at next step
+* **Enable Promoted Discovery**: do you want adverts?
 	
 2. The next step is on the setup page, and the only thing you have to do is again go back to your customize page on Tumblr <http://www.tumblr.com/customize/your-blog-name> and fill the field:
 
-	* **Disqus Shortname** - add your Disqus Shortname in this field
+* **Disqus Shortname** - add your Disqus Shortname in this field
 	
 Now your main configuration is done.
 
